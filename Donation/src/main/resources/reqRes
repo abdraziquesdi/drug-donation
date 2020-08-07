@@ -1,0 +1,54 @@
+Request and Response
+
+
+Request 
+POST: /care/userprofile
+Body:{
+		"firstName" : "ABD",
+		"lastName" : "RAZ",
+		"phoneNo"  : "1234567",
+		"emailId"  : "abdque@gmail.com",
+		"pwd"		: "password",
+		"address"  : {
+						"line" : "wakad",
+						"city" : "Pune",
+						"state" : "Maharashtra",
+						"zipCode" : "411057"
+					}
+	}
+	
+Response
+Body:{ "uid" : 2,
+		"status" : true;
+		"sessionId" : "8765435",
+		"timeStamp" : "2019 09 22"
+	}	
+	
+Request 
+POST: /care/userprofile/{uid}/medicines
+Body:
+[
+	{
+		"name":"pracetamol",
+		"type": "FLU",
+		"power": "200",
+		"quantity":"20",
+		"expiryDate" : "01/01/2020",
+		"donatedBy":""
+	},
+	{
+		"name":"corex",
+		"type": "FLU",
+		"power": "200",
+		"quantity":"20",
+		"expiryDate" : "01/01/2020",
+		"donatedBy":""
+	}
+]
+	
+Response
+Body:{ 
+		"status" : true;
+		"sessionId" : "8765435",
+		"timeStamp" : "2019 09 22"
+	}
